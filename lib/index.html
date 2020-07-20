@@ -1,0 +1,47 @@
+<!Doctype html>
+<html>
+<body>
+<script>
+var num = 1;
+var myObject = {
+  num: 2,
+  add: function() {
+    this.num = 3;
+    (function() {
+      console.log("第1个出现的console：" + this.num);
+      this.num = 4;
+    })();
+    console.log("第2个出现的console：" + this.num);
+  },
+  sub: function() {
+    console.log("第3个出现的console：" + this.num);
+  }
+};
+
+myObject.add();
+console.log("第4个出现的console：" + myObject.num);
+console.log("第5个出现的console：" + num);
+var sub = myObject.sub;
+sub();
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

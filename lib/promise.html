@@ -1,0 +1,19 @@
+<!Doctype html>
+<html>
+	<head>
+		<title>this is promise</title>
+		<script href='Promise.js' type="text/javascript"></script>
+	</head>
+	<body>
+		<script>
+			const p = new Promise((resolve,reject) => {
+				reject(2)
+			})
+			
+			p.then(
+				value =>{},
+				reason =>{}
+			)
+		</script>
+	</body>
+</html>
